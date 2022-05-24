@@ -1,0 +1,21 @@
+{
+    "name": "mouhamed/poo_project",
+    "autoload": {
+        "psr-4": {
+            "App\\Core\\": "core/",
+            "App\\Model\\": "models/",
+            "App\\Controller\\": "controllers/",
+            "App\\Exception\\": "exceptions/"
+
+        }
+    },
+    "authors": [
+        {
+            "name": "mouhamedfafa",
+            "email": "faymouhamed1994@gmail.com"
+        }
+    ],
+    "require": {
+        
+    }
+}

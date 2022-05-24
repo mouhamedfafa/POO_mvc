@@ -1,0 +1,68 @@
+require_once("../models/Personne.php");
+require_once("../models/User.php");
+require_once("../models/Ac.php");
+require_once("../models/Inscription.php");
+
+
+
+<?php
+ 
+if (isset($_SESSION['user-connect'])) {
+      require_once Constantes::ROOT()."templates/acceuille/acceuille.html.php";} 
+      ?>
+
+
+
+<?php   
+
+if ($_SESSION['user-connect']->$role=="ROLE_AC"){
+  $hidden="";
+}
+?>
+
+
+    <!-- Default dropend button -->
+<div class="btn-group dropend">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" <?= $hidden?> aria-expanded="false">
+    Lister classe
+  </button>
+  <ul class="dropdown-menu">
+    <!-- Dropdown menu links -->
+  </ul>
+</div>
+<div class="btn-group dropend">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"  <?= $hidden?> aria-expanded="false">
+    Lister etudiant
+  </button>
+  <ul class="dropdown-menu">
+    <!-- Dropdown menu links -->
+  </ul>
+</div>
+<div class="btn-group dropend">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" <?= $hidden?>  aria-expanded="false">
+    lister prof
+  </button>
+  <ul class="dropdown-menu">
+    <!-- Dropdown menu links -->
+  </ul>
+</div>
+<div class="btn-group dropend">
+  <button type="button" class="btn btn-secondary dropdown-toggle"  <?= $hidden?> data-bs-toggle="dropdown" aria-expanded="false">
+    lister module
+  </button>
+  <ul class="dropdown-menu">
+    <!-- Dropdown menu links -->
+  </ul>
+</div>
+
+<!-- Split dropend button -->
+<div class="btn-group dropend">
+
+  <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" <?=  $hidden?> data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropend</span>
+  </button>
+  <ul class="dropdown-menu">
+    <!-- Dropdown menu links -->
+  </ul>
+</div>
+
